@@ -9,11 +9,6 @@ export interface Post {
   body: string;
 }
 
-export interface Iactivities {
-  id: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,7 +26,7 @@ export class AppComponent implements OnInit {
     this.initializeData();
   }
 
-
+  // Call a dummy API to get some data for display
   private initializeData() {
     this.http.get<Post[]>('https://jsonplaceholder.typicode.com/posts')
     .subscribe(dummyData => {
@@ -39,6 +34,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+  // Subscribe to SWUpdate's "available" event and notify the user a new version is available.
   private listenForSvcWorkerUpdate() {
     if (this.swUpdate.isEnabled) {
       this.swUpdate.available.subscribe(event => {
