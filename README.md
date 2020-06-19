@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
 
+This demo project shows how you can add service worker to your Angular project and explains how to configure it to handle static and dynamic assets offline for your progressive web app.   
+
+It also shows how you can detect a new version of your app is available to notify the user before refreshing the page to bring in the new version. 
+
 See my [blog](http://dev-reboot.com/service-worker) for an explanation of the code.
 
 ## Development server
